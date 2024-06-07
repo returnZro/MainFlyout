@@ -4,6 +4,7 @@ public partial class MainFlyout : FlyoutPage
 {
 	public MainFlyout()
 	{
-		InitializeComponent();
+	      InitializeComponent();
+              NavigationPage.SetHasNavigationBar(this, false);
 	}
 }
