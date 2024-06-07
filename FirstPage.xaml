@@ -13,5 +13,46 @@
 
         <Button HorizontalOptions="Center" Text="Navigate to Second page"
                 Clicked="Button_Clicked"/>
+        <ListView CachingStrategy="RecycleElement">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Baboon</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                    <x:String>Mandrill</x:String>
+                    <x:String>Proboscis Monkey</x:String>
+                    <x:String>Red-shanked Douc</x:String>
+                    <x:String>Gray-shanked Douc</x:String>
+                    <x:String>Golden Snub-nosed Monkey</x:String>
+                    <x:String>Black Snub-nosed Monkey</x:String>
+                    <x:String>Tonkin Snub-nosed Monkey</x:String>
+                    <x:String>Thomas's Langur</x:String>
+                    <x:String>Purple-faced Langur</x:String>
+                    <x:String>Gelada</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid RowSpacing="8"
+                              Padding="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button HeightRequest="40"
+                                    Text="{Binding .}"
+                                    Clicked="Button_Clicked" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </VerticalStackLayout>
 </ContentPage>
